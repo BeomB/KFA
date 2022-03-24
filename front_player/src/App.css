@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');      
+
+.left-side{           
+  width: 25%;
+  float: left;
+  height: 2000px;
+  color: aliceblue;
+  background-color: black;
+  font-family: 'Jua', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.left-side .person_photo{
+  margin-top: 10%;
+  margin-left: 15%;
+  margin-bottom: 0%;
+  width: 150px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.left-side h5{
+   font-style: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+.left-side .person_id{
+  margin: 10%;
+  margin-left: 5%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.left-side .person_project{
+  margin: 10%;
+  margin-bottom: 0%;
+  margin-left: 5%;
+  margin-top : -20%;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left-side .progress{
+  width: 70%;
 }
+.left-side .person_certificate{
+  margin: 10%;
+  margin-left: 5%;
+  color: white;
+}
+
+
+.right-side{        /*�ㅻⅨ履� �곸뿭�쇰줈 �섎닎*/
+  width: 75%;
+  height: 2000px;
+  float: right;
+  box-sizing: border-box;
+  background-color: beige;
+  font-family: 'Jua', sans-serif;
+}
+
+
+.left-side h5{
+  font-style: bold;
+}
+
+.left-side .person_project{
+  margin: 10%;
+  margin-bottom: 0%;
+  margin-left: 5%;
+  margin-top : -20%;
+  color: white;
+ }
+
+
+.right-side .right-text{
+ margin: 10%;
+ margin-left: 5%;
+ color: black;
+ margin-top: 1%
+}
+
+.right-side .right-text{
+  margin: 10%;
+  margin-left: 5%;
+  color: black;
+  margin-top: 4%
+ }
+
+ .right-side .right-text-title{
+    font-style: bold;
+    font-size: 20px;
+ }
+
+ .right-side .poto{
+   font-size: 20px;
+   font-weight: 500;
+   line-height: 40px;
+ }
+
+ .right-side .accordion{
+  margin-top: 5px;
+}
+
+ 

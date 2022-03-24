@@ -1,0 +1,20 @@
+{
+  "name": "kfa_player",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd front_player && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beombeom1119/kfa_player.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beombeom1119/kfa_player/issues"
+  },
+  "homepage": "https://github.com/beombeom1119/kfa_player#readme"
+}
