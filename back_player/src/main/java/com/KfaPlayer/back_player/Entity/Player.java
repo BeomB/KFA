@@ -21,6 +21,8 @@ public class Player {
     @Column
     private String team;
     @Column
+    private String position;
+    @Column
     private int goal;
     @Column
     private int assist;

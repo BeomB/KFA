@@ -8,7 +8,7 @@ const RightSide = () => {
 
     return (
         <>
-            <Accordion >
+            <Accordion>
                 <Accordion.Item eventKey="0" className='accordion'>
                     <Accordion.Header>GoalKeeper</Accordion.Header>
                     <Accordion.Body><GoalKeeper/></Accordion.Body>
