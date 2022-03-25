@@ -1,12 +1,26 @@
-import React, { useState } from 'react'
-
-
+import React, { useEffect, useState } from 'react'
+import axios from 'axios';
 
 const GoalKeeper = () => {
-    const [GoalKeeper, etGoalKeeper] = useState("김승규")
+
+    const [keepers, setKeepers] = useState("")
+    const [hello, setHello] = useState("DF")
+
+
+    useEffect(() => {
+        axios.get(`http://localhost:8080/getposition/${hello}`).then(({ data }) => setKeepers(data));
+    }, [])
+
+
+    let btnC = () => {
+        setHello("GK")
+    }
+
 
     return (
-        <h1>{GoalKeeper}</h1>
+        <>
+            <button onClick={()=>btnC()}></button>
+        </>
     )
 }
 

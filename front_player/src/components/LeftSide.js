@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ProgressBar } from 'react-bootstrap'
 import KFA_photo from '../../src/images/KFA_photo.jpeg'
+import axios from 'axios';
 
 const LeftSide = () => {
 

@@ -1,31 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Accordion } from 'react-bootstrap'
 import GoalKeeper from './GoalKeeper'
 
 
+
 const RightSide = () => {
 
+    const [position, setPosition] = useState("Null")
+
+    useEffect(() => {
+        console.log(position)
+    },)
 
     return (
         <>
             <Accordion>
                 <Accordion.Item eventKey="0" className='accordion'>
-                    <Accordion.Header>GoalKeeper</Accordion.Header>
-                    <Accordion.Body><GoalKeeper/></Accordion.Body>
+                    <Accordion.Header onClick={() => { setPosition(position => "GK");}}>GoalKeeper</Accordion.Header>
+                    <Accordion.Body><GoalKeeper /></Accordion.Body>
                 </Accordion.Item>
 
                 <Accordion.Item eventKey="1" className='accordion'>
-                    <Accordion.Header>Defender</Accordion.Header>
+                    <Accordion.Header onClick={() => { setPosition((position => "DF")); }}>Defender</Accordion.Header>
                     <Accordion.Body>-------------</Accordion.Body>
                 </Accordion.Item>
 
                 <Accordion.Item eventKey="2" className='accordion'>
-                    <Accordion.Header>Midfielder</Accordion.Header>
+                    <Accordion.Header onClick={() => { setPosition((position => "MF")); }}>Midfielder</Accordion.Header>
                     <Accordion.Body>--------------</Accordion.Body>
                 </Accordion.Item>
 
                 <Accordion.Item eventKey="3" className='accordion'>
-                    <Accordion.Header>Foward</Accordion.Header>
+                    <Accordion.Header onClick={() => { setPosition((position => "FW"));  }}>Foward</Accordion.Header>
                     <Accordion.Body>----------</Accordion.Body>
                 </Accordion.Item>
 

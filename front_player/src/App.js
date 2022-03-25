@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css';
 import LeftSide from './components/LeftSide';
 import RightSide from './components/RightSide';
+import 'bootstrap/dist/css/bootstrap.css'; 
 
 const App = () => {
   return (

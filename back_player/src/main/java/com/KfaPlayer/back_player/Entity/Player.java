@@ -38,4 +38,9 @@ public class Player {
         this.goal = goal;
         this.assist = assist;
     }
+
+
+
+
+
 }
