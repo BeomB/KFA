@@ -17,6 +17,8 @@ public class Player {
     private Long number;
 
     @Column
+    private String photo;
+    @Column
     private String name;
     @Column
     private String team;

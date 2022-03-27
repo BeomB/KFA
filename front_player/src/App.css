@@ -97,4 +97,24 @@
   margin-top: 5px;
 }
 
+
+
+.player_table button
+{
+  background-color: rgb(233, 106, 106);
+  transition: background-color .5s;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  outline: 0;
+}
+
+.player_table button:hover
+{
+  background-color: rgb(252, 0, 0) ;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  outline: 0;
+}
  

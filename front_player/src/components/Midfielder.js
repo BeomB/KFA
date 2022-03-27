@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Table } from 'react-bootstrap';
 
-const GoalKeeper = () => {
+const Midfielder = () => {
 
     const [players, setPlayers] = useState([]);
 
@@ -10,7 +10,7 @@ const GoalKeeper = () => {
         // fetchData란 비동기함수 생성
         const fetchData = async () => {
             const result = await axios(
-                "http://localhost:8080/getposition/gk"
+                "http://localhost:8080/getposition/mf"
             );
             setPlayers(result.data);
         };
@@ -38,8 +38,6 @@ const GoalKeeper = () => {
     {
         console.log("assist-1");
     }
-
-
 
 
     return (
@@ -70,4 +68,4 @@ const GoalKeeper = () => {
     );
 };
 
-export default GoalKeeper
+export default Midfielder
