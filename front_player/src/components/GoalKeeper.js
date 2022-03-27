@@ -25,8 +25,9 @@ const GoalKeeper = () => {
 
   const score= (key) =>
   {
+    axios.put(`http://localhost:8080/score/${key}`, {
+    })
     console.log(key+"가 골 넣었어요")
-
   }
 
   const score_cancel = (key) => {
