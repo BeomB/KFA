@@ -7,44 +7,43 @@ const GoalKeeper = () => {
   const [players, setPlayers] = useState([]);
   const [number, setNumber] = useState(0)
 
-
   useEffect(() => {
-    // fetchData란 비동기함수 생성
-    const fetchData = async () => {
-      const result = await axios(
-        "http://localhost:8080/getposition/gk"
-      );
-      setPlayers(result.data);
-    };
     fetchData();
-
   }, [number]);
 
+  const fetchData = async () => {
+    const result = await axios("http://localhost:8080/getposition/gk");
+    setPlayers(result.data);
+  };
+
   const Header = ["이름", "사진", "등번호", "소속 팀", "골", "도움"]
-
-
-  const score= (key) =>
+  
+  const score= async (key) =>
   {
-    axios.put(`http://localhost:8080/score/${key}`, {
-    })
-    console.log(key+"가 골 넣었어요")
+    await axios.put(`http://localhost:8080/score/${key}`, {})
+    console.log("score")
+    fetchData()
   }
-
-  const score_cancel = (key) => {
-    console.log(key + "골 마이너스")
+  
+  const score_cancel = async (key) => {
+    await axios.put(`http://localhost:8080/score_cancel/${key}`, {})
+    console.log("score_cancel")
+    fetchData()
   };
 
-  const assist = (key) => {
-    console.log(key + "어시스트 추가")
+  const assist = async (key) => {
+    await axios.put(`http://localhost:8080/assist/${key}`, {})
+    console.log("assist")
+    fetchData()
   };
 
-  const assist_cancel = (key) => {
-    console.log(key + "어시스트 빼기")
+  const assist_cancel = async (key) => {
+    await axios.put(`http://localhost:8080/assist_cancel/${key}`, {})
+    console.log("assist_cancel")
+    fetchData()
   };
 
-
-
-
+  
   return (
     <Table className='player_table'>
       <thead>
@@ -65,8 +64,8 @@ const GoalKeeper = () => {
               <td><img src={playerList.photo}></img></td>
               <td>{playerList.number}</td>
               <td>{playerList.team}</td>
-              <td>{playerList.goal} <button onClick={() => score(playerList.number)}>+</button> <button onClick={() => { setNumber(playerList.number); score_cancel() }}>-</button> </td>
-              <td>{playerList.assist} <button onClick={() => assist()}>+</button> <button onClick={() => assist_cancel()}>-</button> </td>
+              <td>{playerList.goal} <button onClick={async () => score(playerList.number)}>+</button> <button onClick={async () => {  score_cancel(playerList.number) }}>-</button> </td>
+              <td>{playerList.assist} <button onClick={async () => assist(playerList.number)}>+</button> <button onClick={async () => assist_cancel(playerList.number)}>-</button> </td>
             </tr>
           );
         })}
