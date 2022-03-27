@@ -17,7 +17,7 @@ const GoalKeeper = () => {
         fetchData();
     }, []);
 
-    const Header =["이름","등번호","소속 팀","골","도움"]
+    const Header =["이름","사진","등번호","소속 팀","골","도움"]
 
     function score()
     {
@@ -51,6 +51,7 @@ const GoalKeeper = () => {
             <th>{Header[2]}</th>
             <th>{Header[3]}</th>
             <th>{Header[4]}</th>
+            <th>{Header[5]}</th>
           </tr>
         </thead>
         <tbody>
@@ -58,6 +59,7 @@ const GoalKeeper = () => {
             return (
               <tr key={playerList.number}>
                 <td>{playerList.name}</td>
+                <td><img src={playerList.photo}></img></td>
                 <td>{playerList.number}</td>
                 <td>{playerList.team}</td>
                 <td>{playerList.goal} <button onClick={()=> score()}>+</button> <button onClick={()=> score_minus()}>-</button> </td>
