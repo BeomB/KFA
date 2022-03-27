@@ -8,13 +8,6 @@ import Midfielder from './Midfielder'
 
 const Accordian = () => {
 
-    function Link_to() {
-        return (
-            <Link to={"/haha"}>
-            </Link>
-        )
-    }
-
     return (
         <Accordion>
             <Accordion.Item eventKey="0" className='accordion'>
@@ -36,8 +29,8 @@ const Accordian = () => {
                 <Accordion.Header>Foward</Accordion.Header>
                 <Accordion.Body><Foward /></Accordion.Body>
             </Accordion.Item>
-            <Link to="/haha"><br />
-                <Button> 이동하기 </Button>
+            <Link to="/information"><br />
+                <Button id='btn_Link'> 정보보기 </Button>
             </Link>
         </Accordion>
     )
