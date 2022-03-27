@@ -1,50 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import { Accordion } from 'react-bootstrap'
-import GoalKeeper from './GoalKeeper'
-import axios from 'axios';
-import Defender from './Defender';
-import Midfielder from './Midfielder';
-import Foward from './Foward';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Accordian from './Accordian_player';
 
 
 
 const RightSide = () => {
-
-    const [position, setPosition] = useState("DF")
-    const [players, setPlayers] = useState("")
-
-   
-    const setField = () =>
-    {
-        setPosition(position => "GK");
-    }
-
     return (
-        <>
-            <Accordion>
-                <Accordion.Item eventKey="0" className='accordion'>
-                    <Accordion.Header onClick={() => { setField() }}>GoalKeeper</Accordion.Header>
-                    <Accordion.Body><GoalKeeper/></Accordion.Body>
-                </Accordion.Item>
+            <BrowserRouter>
+                <Routes>
+                    <Route exact path="/" element={<Accordian/>}>          {/* exact 는 정확히 일치할 경우에만 사용한다 */}</Route>
+                    <Route path="/haha" element={<>gk</>}>    {/* 다이나믹한 주소창을 받아야할때는 클론으로 처리할 수 있다. */}
+                    </Route>
 
-                <Accordion.Item eventKey="1" className='accordion'>
-                    <Accordion.Header onClick={() => { setPosition((position => "DF")); }}>Defender</Accordion.Header>
-                    <Accordion.Body><Defender/></Accordion.Body>
-                </Accordion.Item>
-
-                <Accordion.Item eventKey="2" className='accordion'>
-                    <Accordion.Header onClick={() => { setPosition((position => "MF")); }}>Midfielder</Accordion.Header>
-                    <Accordion.Body><Midfielder/></Accordion.Body>
-                </Accordion.Item>
-
-                <Accordion.Item eventKey="3" className='accordion'>
-                    <Accordion.Header onClick={() => { setPosition((position => "FW")); }}>Foward</Accordion.Header>
-                    <Accordion.Body><Foward/></Accordion.Body>
-                </Accordion.Item>
-
-            </Accordion>
-            
-        </>
+                </Routes>                                     {/* 화면이 바뀌는 부분은 Switch 안 */}
+            </BrowserRouter>
     )
 }
 

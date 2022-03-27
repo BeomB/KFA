@@ -117,4 +117,13 @@
   border: 0;
   outline: 0;
 }
+
+
+.player_table img
+{
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  
+}
  
