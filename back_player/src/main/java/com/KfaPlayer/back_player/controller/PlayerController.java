@@ -4,12 +4,10 @@ package com.KfaPlayer.back_player.controller;
 import com.KfaPlayer.back_player.Entity.Player;
 import com.KfaPlayer.back_player.repository.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @CrossOrigin(origins = "http://localhost:3000")
@@ -39,6 +37,40 @@ public class PlayerController {
     {
         return playerRepository.findByPosition(position);
     }
+
+
+    @PutMapping("/score/{number}")
+    public Player Score(@PathVariable Long number)
+    {
+        Optional<Player> player = playerRepository.findById(number);
+        Player score_player = new Player();
+        score_player.setNumber(player.get().getNumber());
+        score_player.setPhoto(player.get().getPhoto());
+        score_player.setName(player.get().getName());
+        score_player.setGoal(player.get().getGoal()+1);
+        score_player.setAssist(player.get().getAssist());
+        score_player.setTeam(player.get().getTeam());
+        score_player.setPosition(player.get().getPosition());
+        playerRepository.save(score_player);
+        return score_player;
+    }
+
+    @PutMapping("/score_cancel/{number}")
+    public Player ScoreCancel(@PathVariable Long number)
+    {
+        Optional<Player> player = playerRepository.findById(number);
+        Player score_player = new Player();
+        score_player.setNumber(player.get().getNumber());
+        score_player.setPhoto(player.get().getPhoto());
+        score_player.setName(player.get().getName());
+        score_player.setGoal(player.get().getGoal()-1);
+        score_player.setAssist(player.get().getAssist());
+        score_player.setTeam(player.get().getTeam());
+        score_player.setPosition(player.get().getPosition());
+        playerRepository.save(score_player);
+        return score_player;
+    }
+
 
 
 

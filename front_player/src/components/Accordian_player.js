@@ -15,7 +15,6 @@ const Accordian = () => {
         )
     }
 
-
     return (
         <Accordion>
             <Accordion.Item eventKey="0" className='accordion'>
@@ -37,11 +36,9 @@ const Accordian = () => {
                 <Accordion.Header>Foward</Accordion.Header>
                 <Accordion.Body><Foward /></Accordion.Body>
             </Accordion.Item>
-            <Link to="/haha">
+            <Link to="/haha"><br />
                 <Button> 이동하기 </Button>
             </Link>
-
-
         </Accordion>
     )
 }
