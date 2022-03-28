@@ -29,9 +29,12 @@ const Accordian = () => {
                 <Accordion.Header>Foward</Accordion.Header>
                 <Accordion.Body><Foward /></Accordion.Body>
             </Accordion.Item>
+            
+            <div style={{textAlign:"right", marginRight:"40px"}}>
             <Link to="/information"><br />
                 <Button id='btn_Link'> 정보보기 </Button>
             </Link>
+            </div>
         </Accordion>
     )
 }

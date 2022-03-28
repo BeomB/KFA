@@ -97,8 +97,6 @@
   margin-top: 5px;
 }
 
-
-
 .player_table button
 {
   background-color: rgb(233, 106, 106);
@@ -121,8 +119,8 @@
 
 .player_table img
 {
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   border-radius: 10px;
   
 }

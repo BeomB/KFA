@@ -1,26 +1,48 @@
-import React, { useState } from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import { ProgressBar } from 'react-bootstrap'
 import KFA_photo from '../../src/images/KFA_photo.jpeg'
 
 const LeftSide = () => {
 
-    const [lang, setLang] = useState({ korea: 80, Iran :70 })
-    
+    const [games, setGames] = useState([])
+
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const fetchData = async () => {
+        const result = await axios("http://localhost:8080/getgames");
+        setGames(result.data);
+        console.log(games)
+    };
+
+
     return (
-        <>
+        <div>
             <div>
-                <img className="person_photo" src={KFA_photo}/>
+                <img className="person_photo" src={KFA_photo} />
             </div>
             <div className="person_id">
-                <h5>  KFA </h5>
-                <br/>
-                <p>대한민국 vs 이란<br/></p><br /><br />
+                <h2>  KFA </h2>
+                <br /><br /><br />
             </div>
-            <div className="person_project">
-                대한민국 : <ProgressBar now={lang.korea} variant="warning" />
-                이란 :<ProgressBar now={lang.Iran} variant="warning" />
+            <div className='person_project'>
+                {games.map((gameList) => {
+                    return (
+                        <div key={gameList.id}>
+                            <div className="ha" style={{textAlign : "center", marginLeft: "-200px"} }>
+                            <h5>{gameList.homeTeamName} VS  {gameList.awayTeamName}</h5>
+                            <h5>{gameList.homeTeamScore} : {gameList.awayTeamScore}</h5>
+                            <hr/>
+                            </div>
+                        </div>
+
+                    );
+                })}
             </div>
-        </>
+        </div>
     )
 }
 
