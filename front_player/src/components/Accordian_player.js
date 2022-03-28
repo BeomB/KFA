@@ -32,7 +32,7 @@ const Accordian = () => {
             
             <div style={{textAlign:"right", marginRight:"40px"}}>
             <Link to="/information"><br />
-                <Button id='btn_Link'> 정보보기 </Button>
+                <Button id='btn_Link'> 경기 추가하기 </Button>
             </Link>
             </div>
         </Accordion>

@@ -3,15 +3,13 @@ package com.KfaPlayer.back_player.Entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @Entity
 @Table(name = "KfaPlayer")
 public class Player {
+
 
     @Id
     private Long number;
@@ -40,9 +38,6 @@ public class Player {
         this.goal = goal;
         this.assist = assist;
     }
-
-
-
 
 
 }

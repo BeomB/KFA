@@ -45,7 +45,10 @@
 }
 
 
-.right-side{        /*�ㅻⅨ履� �곸뿭�쇰줈 �섎닎*/
+.right-side{        
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-left: 30px;
   width: 75%;
   height: 2000px;
   float: right;
@@ -127,6 +130,21 @@
  
 #btn_Link
 {
-  color: rgb(5, 50, 148);
+  color: rgb(255, 255, 255);
   text-align: right;
 }
+
+.game_form input{
+  font-size:18px;
+  /* padding:10px 10px 10px 5px; */
+  margin-bottom: 5px;
+  display:block;
+  width:200px;
+  font-size: 15px;
+  border:none;
+  border-bottom:1px solid #757575;
+  background-color: beige;
+}
+
+
+.game_form input:focus    { outline:none; }

@@ -2,16 +2,15 @@ package com.KfaPlayer.back_player.Entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 
 @Data
 @Entity
 public class Game {
 
 
-    @Id
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
@@ -35,12 +34,7 @@ public class Game {
 
     public Game()
     {
-
-
     }
-
-
-
     public Game(Long id, String homeTeamName, String awayTeamName, int homeTeamScore, int awayTeamScore, int homeTeamShare, int awayTeamShare) {
         this.id = id;
         this.homeTeamName = homeTeamName;
