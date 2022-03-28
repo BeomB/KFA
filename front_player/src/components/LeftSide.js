@@ -35,6 +35,7 @@ const LeftSide = () => {
                             <div className="ha" style={{textAlign : "center", marginLeft: "-200px"} }>
                             <h5>{gameList.homeTeamName} VS  {gameList.awayTeamName}</h5>
                             <h5>{gameList.homeTeamScore} : {gameList.awayTeamScore}</h5>
+                            <button>삭제</button>
                             <hr/>
                             </div>
                         </div>

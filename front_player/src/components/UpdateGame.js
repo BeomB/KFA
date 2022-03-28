@@ -9,6 +9,7 @@ const UpdateGame = () => {
 
   const { id, homeTeamName, awayTeamName, homeTeamScore, awayTeamScore, homeTeamShare, awayTeamShare } = state;
 
+  
 
   const updateGame = async () => {
 
@@ -35,7 +36,7 @@ const UpdateGame = () => {
       .catch((error) => {
         console.log(error)
       })
-
+      History.push("/")
   }
 
 
@@ -67,7 +68,7 @@ const UpdateGame = () => {
         홈 팀 점유율: <input name="homeTeamShare" value={homeTeamShare || ''} placeholder='단위 : %' onChange={onChange}></input><br />
         어웨이 팀 점유율 :<input name="awayTeamShare" value={awayTeamShare || ''} placeholder='단위 : %' onChange={onChange}></input><hr />
       </form>
-      <button onClick={() => UpdateGameForm()}>경기 결과 저장</button>
+      <Link to="/"><button onClick={() => UpdateGameForm()}>경기 결과 저장</button> </Link>
       <div style={{ textAlign: "right", marginRight: "40px" }}>
         <Link to="/"><br /> <Button id='btn_Link'> 메인으로 </Button> </Link>
       </div>
