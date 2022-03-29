@@ -39,6 +39,20 @@ public class PlayerController {
     }
 
 
+    @GetMapping("/topgoal")
+    public String topGoal()
+    {
+        return playerRepository.selecttopgoal();
+    }
+
+
+    @GetMapping("/topassist")
+    public String topassist()
+    {
+        return playerRepository.selecttopassist();
+    }
+
+
     @PutMapping("/score/{number}")
     public Player Score(@PathVariable Long number)
     {

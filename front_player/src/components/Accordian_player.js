@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import { Accordion, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Defender from './Defender'
@@ -8,14 +9,31 @@ import Midfielder from './Midfielder'
 
 const Accordian = () => {
 
+    
+    const [topGoal, setTopGoal] = useState("")
+    const [topAssist, setTopAssist] = useState("")
+
     useEffect(() => {
-        
+        fetchtopGoal()
+        fetchtopassist()
     },[])
+
+    const fetchtopGoal = async () => {
+        const result = await axios("http://localhost:8080/topgoal");
+        setTopGoal(result.data)
+      };
+
+      const fetchtopassist = async () => {
+        const result = await axios("http://localhost:8080/topassist");
+        setTopAssist(result.data)
+      };
     
 
     return (
         <>
         <h3 style={{margin:"10px",marginBottom:"20px"}}>KFA PLAYER 정보</h3>
+        <div style={{textAlign:"right", marginRight:"60px", marginBottom :"20px"}}><h5>최다 골 선수 : {topGoal},  최다 도움 선수 : {topAssist}</h5> </div>
+        
         <Accordion>
             <Accordion.Item eventKey="0" className='accordion'>
                 <Accordion.Header>GoalKeeper</Accordion.Header>
@@ -43,6 +61,7 @@ const Accordian = () => {
             </Link>
             </div>
         </Accordion>
+        
         </>
     )
 }
