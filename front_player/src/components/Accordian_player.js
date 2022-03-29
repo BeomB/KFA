@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Accordion, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Defender from './Defender'
@@ -7,6 +7,11 @@ import GoalKeeper from './GoalKeeper'
 import Midfielder from './Midfielder'
 
 const Accordian = () => {
+
+    useEffect(() => {
+        
+    },[])
+    
 
     return (
         <Accordion>

@@ -18,9 +18,14 @@ const LeftSide = () => {
         console.log(games)
     };
 
+    const del= (id)=>
+    {
+        console.log(id+ "delete")
+    }
+
 
     return (
-        <div>
+        <div style={{marginLeft:"30px"}}>
             <div>
                 <img className="person_photo" src={KFA_photo} />
             </div>
@@ -33,9 +38,10 @@ const LeftSide = () => {
                     return (
                         <div key={gameList.id}>
                             <div className="ha" style={{textAlign : "center", marginLeft: "-200px"} }>
-                            <h5>{gameList.homeTeamName} VS  {gameList.awayTeamName}</h5>
+                            <h5>{gameList.homeTeamName} VS  {gameList.awayTeamName}</h5> 
                             <h5>{gameList.homeTeamScore} : {gameList.awayTeamScore}</h5>
-                            <button>삭제</button>
+                            <button className='btn_del' onClick={()=> del(gameList.id)}>삭제</button>
+                            
                             <hr/>
                             </div>
                         </div>

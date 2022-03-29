@@ -64,7 +64,7 @@ const Defender = () => {
               <td><img src={playerList.photo}></img></td>
               <td>{playerList.number}</td>
               <td>{playerList.team}</td>
-              <td>{playerList.goal} <button onClick={async () => score(playerList.number)}>+</button> <button onClick={async () => {  score_cancel(playerList.number) }}>-</button> </td>
+              <td>{playerList.goal} <button onClick={async () => score(playerList.number)}>+</button> <button onClick={async () => score_cancel(playerList.number)}>-</button> </td>
               <td>{playerList.assist} <button onClick={async () => assist(playerList.number)}>+</button> <button onClick={async () => assist_cancel(playerList.number)}>-</button> </td>
             </tr>
           );

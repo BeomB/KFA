@@ -65,7 +65,6 @@
 .left-side .person_project{
   margin: 10%;
   margin-bottom: 0%;
-  margin-left: 5%;
   margin-top : -20%;
   color: white;
  }
@@ -146,5 +145,22 @@
   background-color: beige;
 }
 
+.btn_del
+{
+  
+  background-color: rgb(238, 85, 85);
+  transition: background-color .5s;
+  width: 50px;
+  height: 25px;
+  border: 0;
+  font-size: 15px;
+  border-radius: 1.5px;
+}
+
+
+.btn_del:hover
+{
+  background-color: rgb(252, 0, 0) ;
+}
 
 .game_form input:focus    { outline:none; }

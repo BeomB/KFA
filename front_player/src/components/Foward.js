@@ -21,25 +21,21 @@ const Foward = () => {
   const score= async (key) =>
   {
     await axios.put(`http://localhost:8080/score/${key}`, {})
-    console.log("score")
     fetchData()
   }
   
   const score_cancel = async (key) => {
     await axios.put(`http://localhost:8080/score_cancel/${key}`, {})
-    console.log("score_cancel")
     fetchData()
   };
 
   const assist = async (key) => {
     await axios.put(`http://localhost:8080/assist/${key}`, {})
-    console.log("assist")
     fetchData()
   };
 
   const assist_cancel = async (key) => {
     await axios.put(`http://localhost:8080/assist_cancel/${key}`, {})
-    console.log("assist_cancel")
     fetchData()
   };
 
