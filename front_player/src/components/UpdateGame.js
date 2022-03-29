@@ -50,7 +50,12 @@ const UpdateGame = () => {
   }
 
   const UpdateGameForm = () => {
-    updateGame();
+    if (window.confirm("경기를 추가하시겠습니까?") == true){    
+      updateGame();
+  }else{   
+      return false;
+  }
+    
   }
 
 
@@ -67,9 +72,10 @@ const UpdateGame = () => {
         홈 팀 점유율: <input name="homeTeamShare" value={homeTeamShare || ''} placeholder='단위 : %' onChange={onChange}></input><br />
         어웨이 팀 점유율 :<input name="awayTeamShare" value={awayTeamShare || ''} placeholder='단위 : %' onChange={onChange}></input><hr />
       </form>
-      <Link to="/"><button href="/"onClick={() => {UpdateGameForm(); window.location.href="/"}} >경기 결과 저장</button></Link>
-      <div style={{ textAlign: "right", marginRight: "40px" }}>
-        <Link to="/"><br /> <Button id='btn_Link'> 메인으로 </Button> </Link>
+    
+      <div style={{ textAlign: "right", marginRight: "40px"}}>
+      <Link to="/"><Button href="/"onClick={() => {UpdateGameForm(); window.location.href="/"}} >경기 결과 저장</Button></Link>
+        <Link to="/"><Button style={{marginLeft:"10px"}} id='btn_Link'> 메인으로 </Button> </Link>
       </div>
     </>
   )

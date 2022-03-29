@@ -31,4 +31,12 @@ public class GameController {
         return "성공";
     }
 
+    @DeleteMapping("/deletegame/{id}")
+    public String DeleteGame(@PathVariable Long id)
+    {
+        gameRepository.deleteById(id);
+        return "삭제 완료";
+    }
+
+
 }

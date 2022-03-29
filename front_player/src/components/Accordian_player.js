@@ -14,6 +14,8 @@ const Accordian = () => {
     
 
     return (
+        <>
+        <h3 style={{margin:"10px",marginBottom:"20px"}}>KFA PLAYER 정보</h3>
         <Accordion>
             <Accordion.Item eventKey="0" className='accordion'>
                 <Accordion.Header>GoalKeeper</Accordion.Header>
@@ -41,6 +43,7 @@ const Accordian = () => {
             </Link>
             </div>
         </Accordion>
+        </>
     )
 }
 
