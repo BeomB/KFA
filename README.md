@@ -13,10 +13,6 @@ REST API (GET,POST,PUT,DELETE 메소드를 이용했습니다.)
 
 ## 📖 상세 내용
 
-   
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7c879946-807f-46bd-9318-fd74107c7bc9/Untitled.png)
-
 블로그 설명 : [https://baam-ki.tistory.com/69](https://baam-ki.tistory.com/69)
 
 ## 🛠️ 사용 기술 및 라이브러리
