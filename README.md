@@ -15,6 +15,10 @@ REST API (GET,POST,PUT,DELETE 메소드를 이용했습니다.)
 
 블로그 설명 : [https://baam-ki.tistory.com/69](https://baam-ki.tistory.com/69)
 
+## 📹 시연 영상
+
+[https://youtu.be/QH781dOS0u8](https://youtu.be/QH781dOS0u8)
+
 ## 🛠️ 사용 기술 및 라이브러리
 
 - React, Java Script
