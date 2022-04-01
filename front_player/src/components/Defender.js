@@ -12,7 +12,7 @@ const Defender = () => {
   }, [number]);
 
   const fetchData = async () => {
-    const result = await axios("http://localhost:8080/getposition/df");
+    const result = await axios("http://3.34.181.38:8080/getposition/df");
     setPlayers(result.data);
   };
 
@@ -20,13 +20,13 @@ const Defender = () => {
   
   const score= async (key) =>
   {
-    await axios.put(`http://localhost:8080/score/${key}`, {})
+    await axios.put(`http://3.34.181.38:8080/score/${key}`, {})
     console.log("score")
     fetchData()
   }
   
   const score_cancel = async (key) => {
-    await axios.put(`http://localhost:8080/score_cancel/${key}`, {})
+    await axios.put(`http://3.34.181.38:8080/score_cancel/${key}`, {})
     console.log("score_cancel")
     fetchData()
   };

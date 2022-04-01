@@ -12,7 +12,7 @@ const Foward = () => {
   }, [number]);
 
   const fetchData = async () => {
-    const result = await axios("http://localhost:8080/getposition/fw");
+    const result = await axios("http://3.34.181.38:8080/getposition/fw");
     setPlayers(result.data);
   };
 
@@ -20,12 +20,12 @@ const Foward = () => {
   
   const score= async (key) =>
   {
-    await axios.put(`http://localhost:8080/score/${key}`, {})
+    await axios.put(`http://3.34.181.38:8080/score/${key}`, {})
     fetchData()
   }
   
   const score_cancel = async (key) => {
-    await axios.put(`http://localhost:8080/score_cancel/${key}`, {})
+    await axios.put(`http://3.34.181.38:8080/score_cancel/${key}`, {})
     fetchData()
   };
 
@@ -35,7 +35,7 @@ const Foward = () => {
   };
 
   const assist_cancel = async (key) => {
-    await axios.put(`http://localhost:8080/assist_cancel/${key}`, {})
+    await axios.put(`http://3.34.181.38:8080/assist_cancel/${key}`, {})
     fetchData()
   };
 

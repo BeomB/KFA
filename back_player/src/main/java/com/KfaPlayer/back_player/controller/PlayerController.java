@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://3.34.181.38:80")
 @RestController
 public class PlayerController {
 
@@ -24,7 +24,6 @@ public class PlayerController {
     {
         return "hello";
     }
-
 
     @GetMapping("/getplayer")
     public List<Player> getPlayer()
