@@ -12,7 +12,8 @@ const Defender = () => {
   }, [number]);
 
   const fetchData = async () => {
-    const result = await axios("http://3.34.181.38:8080/getposition/df");
+    const result = await axios("http://localhost:8080/getposition/df");
+    // const result = await axios("http://3.34.181.38:8080/getposition/df");
     setPlayers(result.data);
   };
 
@@ -20,24 +21,28 @@ const Defender = () => {
   
   const score= async (key) =>
   {
-    await axios.put(`http://3.34.181.38:8080/score/${key}`, {})
+    // await axios.put(`http://3.34.181.38:8080/score/${key}`, {})
+    await axios.put(`http://localhost:8080/score/${key}`, {})
     console.log("score")
     fetchData()
   }
   
   const score_cancel = async (key) => {
-    await axios.put(`http://3.34.181.38:8080/score_cancel/${key}`, {})
+    await axios.put(`http://localhost:8080/score_cancel/${key}`, {})
+    // await axios.put(`http://3.34.181.38:8080/score_cancel/${key}`, {})
     console.log("score_cancel")
     fetchData()
   };
 
   const assist = async (key) => {
+    // await axios.put(`http://3.34.181.38:8080/assist/${key}`, {})
     await axios.put(`http://localhost:8080/assist/${key}`, {})
     console.log("assist")
     fetchData()
   };
 
   const assist_cancel = async (key) => {
+    // await axios.put(`http://3.34.181.38:8080/assist_cancel/${key}`, {})
     await axios.put(`http://localhost:8080/assist_cancel/${key}`, {})
     console.log("assist_cancel")
     fetchData()
@@ -64,7 +69,7 @@ const Defender = () => {
               <td><img src={playerList.photo}></img></td>
               <td>{playerList.number}</td>
               <td>{playerList.team}</td>
-              <td>{playerList.goal} <button onClick={async () => score(playerList.number)}>+</button> <button onClick={async () => score_cancel(playerList.number)}>-</button> </td>
+              <td>{playerList.goal} <button onClick={async () => score(playerList.number)}>+</button> <button onClick={async () => {  score_cancel(playerList.number) }}>-</button> </td>
               <td>{playerList.assist} <button onClick={async () => assist(playerList.number)}>+</button> <button onClick={async () => assist_cancel(playerList.number)}>-</button> </td>
             </tr>
           );

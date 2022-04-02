@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-@CrossOrigin(origins = "http://3.34.181.38:80")
+@CrossOrigin("*")
 @RestController
 public class PlayerController {
 
