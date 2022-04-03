@@ -19,14 +19,14 @@ const Accordian = () => {
     },[])
 
     const fetchtopGoal = async () => {
-        // const result = await axios("http://3.34.181.38:8080/topgoal");
-        const result = await axios("http://localhost:8080/topgoal");
+        const result = await axios("http://3.34.181.38:8080/topgoal");
+        // const result = await axios("http://localhost:8080/topgoal");
         setTopGoal(result.data)
       };
 
       const fetchtopassist = async () => {
-        const result = await axios("http://localhost:8080/topassist");
-        // const result = await axios("http://3.34.181.38:8080/topassist");
+        // const result = await axios("http://localhost:8080/topassist");
+        const result = await axios("http://3.34.181.38:8080/topassist");
         setTopAssist(result.data)
       };
     
