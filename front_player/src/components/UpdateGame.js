@@ -24,7 +24,7 @@ const UpdateGame = () => {
     }
 
     // axios.post(`http://localhost:8080/updategame`,JSON.stringify(data), {
-    axios.post(`http://3.34.181.38:8080/updategame`,JSON.stringify(data), {
+    axios.post(`http://3.36.145.57:8080/updategame`,JSON.stringify(data), {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'JWT fefege...'

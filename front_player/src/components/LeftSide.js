@@ -14,7 +14,7 @@ const LeftSide = () => {
 
     const fetchData = async () => {
         // const result = await axios("http://localhost:8080/getgames");
-        const result = await axios("http://3.34.181.38:8080/getgames");
+        const result = await axios("http://3.36.145.57:8080/getgames");
         setGames(result.data);
         console.log(games)
     };
@@ -23,7 +23,7 @@ const LeftSide = () => {
         const del = async (id) => {
             if (window.confirm("정말 삭제하시겠습니까??") == true){    //확인
                 // axios.delete(`http://localhost:8080/deletegame/${id}`);
-                axios.delete(`http://3.34.181.38:8080/deletegame/${id}`);
+                axios.delete(`http://3.36.145.57:8080/deletegame/${id}`);
                 window.location.reload();           
             }else{   //취소
                 return false;
