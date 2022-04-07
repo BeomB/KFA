@@ -52,3 +52,10 @@ REST API (GET,POST,PUT,DELETE 메소드를 이용했습니다.)
 - React와 SpringBoot 사용법
 - JPA Object 형식과 @Query 형식 경험
 - Docker와 EC2 를 이용한 프로젝트 배포
+
+
+
+
+
+
+---- 프로젝트 마음대로 사용 가능합니다. ------
