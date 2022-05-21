@@ -1,4 +1,4 @@
-# KFA Player (React + SpringBoot+Docker)
+# KFA Player (React + SpringBoot+Docker) 
 
 담당 Skills: AWS EC2, AWS RDS, Docker, JPA, Java, React, SpringBoot
 팀 구성: 개인 프로젝트
